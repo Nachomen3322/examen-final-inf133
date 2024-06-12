@@ -1,0 +1,22 @@
+def render_reservation_list(reservations):
+    return [
+        {
+            "user_id" : reservation.user_id,
+            "restaurant_id" : reservation.restaurante,
+            "reservation_date": reservation.reservation_date,
+            "num_guests": reservation.num_guests,
+            "special_requests": reservation.special_requests,
+            "status": reservation.status,
+        }
+        for reservation in reservations
+    ]
+    
+def render_reservation_detail(reservation):
+    return {
+        "user_id" : reservation.user_id,
+            "restaurant_id" : reservation.restaurante,
+            "reservation_date": reservation.reservation_date,
+            "num_guests": reservation.num_guests,
+            "special_requests": reservation.special_requests,
+            "status": reservation.status, 
+    }
